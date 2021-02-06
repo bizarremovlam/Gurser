@@ -1,0 +1,165 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{{settings.image.url}}" type="image/x-icon">
+  <!-- Box icons -->
+  
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}"/>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+  <link rel="stylesheet" href="{% static 'css/owl-theme.default.min.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/all.min.css' %}"/>
+  <link rel="stylesheet" href="{% static 'css/rangeslider.css' %}"/>
+  <title>{% block title %}{{settings.title}}{% endblock %}</title>
+</head>
+
+
+
+<body>
+    {% block body %} 
+    <!-- Header -->
+    
+
+
+    {% endblock %}
+    
+  <footer id="footer" class="section footer">
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-center">
+          <h1>GurSer</h1>
+          <a href="#">Address: 60-49 Road 11378 New York</a>
+          <a href="#">Phone: +65 11.188.888</a>
+          <a href="#">Email: hello.colorlib@gmail.com</a>
+          <div class="footer-icon">
+            
+
+
+          <img src="{% static 'images/twitter.png' %}" alt="">
+          <img src="{% static 'images/facebook.png' %}"  alt="">
+          <img src="{% static 'images/instagram.png' %}" alt="">
+          </div>
+        </div>
+        <div class="footer-center information">
+          <h3>Information</h3>
+         <a href="#" >About Us</a>
+          <a href="#">Checkout</a>
+          <a href="#">Contact</a>
+          <a href="#">Serivius</a>
+        </div>
+        <div class="footer-center">
+          <h3>My Account</h3>
+          <a href="">My Account</a>
+          <a href="">Contact</a>
+          <a href="">Shopping cart</a>
+          <a href="">Shop</a>
+          
+        </div>
+        <div class="footer-center news">
+          <h3>Join Our Newsletter Now</h3>
+          <a href="">
+            
+            Get E-mail updates about our latest shop and special offers.
+
+          </a>
+          
+          <input type="email" placeholder="Enter Your Email" id="input">
+          <button  type="submit"  >Subscribe</button>
+          
+        </div> 
+      </div>
+    </div>
+    </div>
+  </footer>
+
+  <div class="all_right">
+    <div class="container">
+      <div class="row">
+        <div class="col-6"><h5> Copyright &copy; 2021 All right reserved</h5></div>
+        <div class="col-6"> 
+          <!-- <span class="one_span">
+            <img src="images/facebook.png"  alt=""></span>
+          <span>
+            <img src="images/facebook.png" alt=""></span>
+          <span>
+            <img src="images/facebook.png" alt=""></span>
+          <span>
+            <img src="images/facebook.png" alt=""></span> -->
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Footer -->
+<script>
+  var countdate = new Date("Feb 28, 2021 00:00:00").getTime()
+
+  function soon(){
+    var now = new Date().getTime();
+    gap = countdate - now
+
+    var seconds = 1000;
+    var minuts = seconds * 60;
+    var hours = minuts * 60;
+    var days = hours * 24;
+
+    var d = Math.floor(gap / (days));
+    var h = Math.floor((gap % (days)) / (hours));
+    var m = Math.floor((gap % (hours)) / (minuts));
+    var s = Math.floor((gap % (minuts)) / (seconds));
+
+    document.getElementById("days").innerText = d;
+    document.getElementById("hours").innerText = h;
+    document.getElementById("minuts").innerText = h;
+    document.getElementById("seconds").innerText = s;
+
+  }
+
+  setInterval(function(){
+    soon();
+  },1000)
+</script>
+  <!-- Custom Script -->
+  <script src="{%static 'js/jquery.min.js' %}"></script>
+  <script src="{%static 'js/jquery-3.4.1.js' %}"></script>
+  <script src="{%static 'js/bootstrap.min.js' %}"></script>
+  <script src="{%static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{%static 'js/index.js' %}"></script>
+  
+  <script src="{%static 'js/rangeslider.min.js' %}"></script>
+
+  <script>
+  
+
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:false,
+      autoplay:true,
+      autoplayTimeout:2000,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:3
+          },
+          1000:{
+              items:3
+          }
+      }
+    })
+    
+    
+    
+    
+    </script>
+</body>
+
+</html>

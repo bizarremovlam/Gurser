@@ -1,0 +1,1 @@
+"# Gurser-Sowda Web sahypasy" 
